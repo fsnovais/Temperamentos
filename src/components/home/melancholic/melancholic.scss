@@ -1,0 +1,115 @@
+@import "../../../global.scss";
+
+.home{
+    background-color: white;
+
+.container{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        @include mobile{
+            flex-direction: column;
+            align-items: center;
+            .right{
+                order: 0;
+            }
+            .left{
+                order: 1;
+            }
+          }
+        .left{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.4rem;
+            width: 30vw;
+            img{
+                display: none;
+            }
+            h1{
+            margin: 1.5rem;
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: $mainColor;
+            @include mobile{
+                margin: 1rem;
+                font-size: 2.2rem;
+                text-align: center;
+                order: 0;
+            }
+            }
+        @include mobile{
+            width: 80%;
+            img{
+                display: flex;
+                width: 50vw;
+            @include mobile{
+                width: 100%;
+            }
+            }
+
+        }
+        .info{
+            margin: 1.5rem;
+            text-align: justify;
+            @include mobile{
+                font-size: 1rem;
+                margin: 0.5rem;
+                text-align: justify;    
+            }
+        }
+        .link{
+            width: 50%;
+            padding: 1rem;
+            height: 75px;
+            border: 1px solid black;
+            border-radius: 25px;
+            margin: 1rem 1rem;
+            transition: all 0.5s ease;
+            cursor: pointer;
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            color: black;
+            font-size: inherit;
+            color: inherit;
+            &:hover{
+                color: white;
+            }
+
+            @include mobile {
+                font-size: 1rem;
+                width: 50%;
+                height: 20%;
+            }
+            &:hover{
+                background-color: $mainColor;
+                color: white;
+            }
+        }
+        }
+        .right{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50%;
+
+            @include mobile{
+                width: 100%;
+                order: 1;
+                flex-direction: column;
+                img{
+                    display: none;
+                    width: 50vw;
+                @include mobile{
+                    width: 100%;
+                }
+                }
+            }
+            
+        }
+    }
+}
